@@ -1,6 +1,7 @@
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~🅐🅡🅡🅐🅨~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Ａｒｒａｙ: It is a simple Data Structure which has random acess;
+Ａｒｒａｙ: It is a simple Linear_Data_Structure that stores a collection of same_type_of_elements(Homogeneous Data) in a contiguous_block_of_memory(Indexing), 
+            it has random acess;
 
     Random Acess:In order to go to an element we need not to cross every element of array, we can directly jump to the element;
                 Direct jump is possible because of array elements are store continous fashion in memory;
