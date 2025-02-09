@@ -44,9 +44,9 @@ Bubble Sort: In this sorting algo, we place the maximum element at last of unsor
     spaceComplexity: O(1) for all best, Average, worst case.
   
   time complexity
-    for i=0, second loop will take O(n) time to get min element;
-    i=1, O(n-1) to get min element;
-    i=2, O(n-2) to get min element;
+    for i=0, second loop will take O(n) to swap the adjecent pair and place it at last index of unsorted Arr;
+    i=1, O(n-1);
+    i=2, O(n-2);
     .
     .
     .
@@ -57,4 +57,15 @@ Bubble Sort: In this sorting algo, we place the maximum element at last of unsor
   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   as you can understand, this is the summation of n natural Number;
    i.e. n(n+1)/2
-  time complexity in each case 
+
+    Worst case is O(n^2). 
+    Average case is O(n^2).
+
+
+    Best Case:   With the help of an additional flag "didSwap", 
+                "didSwap", we check any swaps were made during a pass. If no swaps are made (i.e. the array is already in ascending order), the flag will remain false,
+                and the algorithm will terminate early. This allows the inner loop to run in O(n) time in the best case
+    
+        i.e. O(n);
+
+
