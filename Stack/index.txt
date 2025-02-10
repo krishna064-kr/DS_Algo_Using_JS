@@ -1,0 +1,20 @@
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Stack ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+stack: 
+      * It is lenear data structure which follows the Last In, First Out (LIFO) principle.
+        # L - Last
+        # I - In
+        # F - First
+        # O - Out
+      * "LIFO" This means the last element inserted into the stack is the first one removed. Like a stack of plates, you can only add or remove plates from the top.
+      * Abstract Data Type (ADT): A stack is often implemented using other data structures like arrays or linked lists.
+      * Single Access Point: Insertions and deletions occur only at the "top" of the stack.
+
+
+  * Operations:
+      Push(): add data into stack.
+      Pop(): delete data from stack.
+      getTop(): return the top element.
+    
+  Overflow: Occurs when trying to push an element onto a full stack.
+  Underflow: Occurs when trying to pop an element from an empty stack.
