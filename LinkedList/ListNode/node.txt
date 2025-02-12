@@ -1,4 +1,0 @@
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Node ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Node: It is a unit or building block of link list, it contain "data" variable which hold the information and  
-        "next" which has the refrence of next node of linked list.

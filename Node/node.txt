@@ -1,0 +1,21 @@
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Node ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Singly Linked List's Node: It is a unit or building block of  singly linked list, it contain "data" variable which hold the information and  
+        "next" which has the refrence of next node of linked list.
+
+        * structure of  Singly LL: [Data | Next] -> [Data | Next] -> [Data | Next] -> null
+
+Doubly Linked List's Node: It is a unit or building block of doubly linked list and binary tree, it contain "data", Next pointer, Prev (Previous) pointer.
+        # Data: The value or data stored in the node.
+        # Next pointer: A reference to the next node in the list.
+        # Prev (Previous) pointer: A reference to the previous node in the list.
+
+        * structure of  Doubly LL: [Prev | Data | Next] <-> [Prev | Data | Next] <-> null
+
+Benefits of Doubly Linked Lists:
+        * Bidirectional Traversal: You can traverse both forward and backward, making operations like deletion and insertion more flexible and efficient in certain cases.
+        * Ease of Deletion: Since each node has a reference to its previous node, it's easier to delete nodes when traversing backward, without needing to search for the previous node.
+        
+Disadvantages:
+        * Memory Overhead: Each node requires extra space to store the reference to the previous node.
+        * Complexity: Insertion and deletion operations are more complex compared to singly linked lists, as you need to update both the prev and next pointers.

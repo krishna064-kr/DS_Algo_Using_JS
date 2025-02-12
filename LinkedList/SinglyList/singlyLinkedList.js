@@ -1,4 +1,4 @@
-import Node from "../ListNode/node.js";
+import Node from "../../Node/singlyLinkedList.js";
 
 class SinglyLinkedList {
   constructor() {
