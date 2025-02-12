@@ -1,0 +1,53 @@
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Tree Structure~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Tree: It is hierarchical model used to organize data in a way that reflects a branching structure, with a root node and sub-nodes connected by edges.
+
+    * most popular tree is Binary Tree.
+
+Tree Terminology:
+    * Node: Each individual element in the tree, It is uniot element or building block of tree.
+    * Root: The top most node, where the tree begins.
+    * Edge: The link between two nodes.
+    * Parent Node: A node that has one or more children.
+    * Child Node: A node that is a descendant of another node.
+    * Leaf Node: A node that has no children.
+    * Subtree: A tree formed by a node and all its descendants.
+    * Height of a Node: The number of edges from that node to the deepest leaf node.
+    * Depth of a Node: The number of edges from the root to that node.
+
+Types of Trees:
+    * Binary Tree: Each node can have at most two children.
+    * Binary Search Tree (BST): A binary tree where for every node has bellow property.👇
+        # All elements in the left subtree are smaller than the node.
+        # All elements in the right subtree are larger than the node.
+    * AVL Tree: A self-balancing binary search tree where the heights of the two child subtrees of any node differ by no more than one.
+    * Red-Black Tree: Another type of self-balancing binary search tree with specific color-based rules.
+    * Heap: A complete binary tree that satisfies the heap property (max-heap or min-heap).
+    * Trie: A tree-like data structure used primarily for storing strings, where nodes represent characters of a word.
+    * B-tree: A self-balancing tree data structure used in databases for storing large blocks of data efficiently.
+
+Operations on Trees:
+    * Traversal: Visiting all nodes in a tree. Common traversal methods include
+        # Pre-order: Visit the root, then left subtree, then right subtree.
+        # In-order: Visit the left subtree, then the root, then the right subtree.  
+        # Post-order: Visit the left subtree, then right subtree, then the root.
+        # Level-order: Visit nodes level by level, often using a queue.
+    * Insertion: Adding a new node to the tree.
+    * Deletion: Removing a node from the tree.
+    * Searching: Looking for a node (or value) in the tree.
+
+Use Cases:
+    * Hierarchical Data Representation: Trees naturally represent hierarchies (e.g., organization charts, file systems).
+    * Search Algorithms: Binary Search Trees (BST) allow efficient searching for elements.
+    * Expression Parsing: Trees can represent expressions, such as in arithmetic operations, where nodes represent operators and operands.
+    * Database Indexing: B-trees are often used in databases to efficiently organize and search for records.
+    * Autocomplete: Tries are used in autocomplete algorithms where nodes represent partial matches of words.
+
+Advantages:
+    * Efficiency: Tree structures provide efficient searching, insertion, and deletion (especially balanced trees).
+    * Hierarchical Structure: Trees are natural representations for hierarchical data.
+    * Scalability: Trees can handle large amounts of data efficiently.
+
+Disadvantages:
+    * Complexity: Some tree operations, like balancing and maintenance (in the case of self-balancing trees), can be complex.
+    * Memory Overhead: Trees typically require additional memory for pointers (edges between nodes).
