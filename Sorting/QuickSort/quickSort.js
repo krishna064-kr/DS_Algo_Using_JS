@@ -1,5 +1,3 @@
-let arr = [1,3,5,7,9,8,6,4,2];
-
 function partition(arr,low, high){
     // 1st element of Arr is the pivote element;
     let pivote = arr[low], i=low+1; 
@@ -27,5 +25,4 @@ function quickSort(arr, low=0, high=arr.length-1){
     return;
 }
 
-quickSort(arr);
-console.log(arr);
+export default quickSort;

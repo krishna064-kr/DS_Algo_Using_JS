@@ -1,5 +1,3 @@
-let arr = [1,3,5,7,9,8,6,4,2,10];
-
 const insertionSort = (arr) => {
   let len = arr.length;
   for (let i = 0; i < len; i++) {
@@ -11,5 +9,4 @@ const insertionSort = (arr) => {
   }
 };
 
-insertionSort(arr);
-console.log(arr);
+export default insertionSort;

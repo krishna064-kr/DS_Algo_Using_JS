@@ -1,0 +1,47 @@
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Merge Sort ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Merge Sort: This algorithm is mainly based on divide and conquer approch that means,
+            divide the list into smaller sub-list sort recursively and, then the merge the 
+            sorted sub-lists that gives the final sorted list.
+
+        * Divide:
+            divide the unsorted list into two parts in each iterations,
+            while completion of the algorithm, unsorted list divide into "n" sub-lists.
+
+        * Conquer (Sort then Merge):
+            It repeatedly merges the sublists to produce new sorted sublists until there is only one sublist left. 
+            The merging process involves comparing elements from the sublists and arranging them in order.
+        
+Example:
+    arr = [1,3,5,7,9,8,6,4,2,10];
+
+    low = 0, high = 9   (arr.length-1)
+    since, low < high
+        divide the arr into two parts, midIndex =  0 + (9-0)/2 = 4;
+                    [1,3,5,7,9]                      [8,6,4,2,10]
+    now, again we call mergeSort on 0 to 5 sub-array and 5 to 9 sub-array;
+                [1,3,5]      [7,9]               [8,6,4]        [2,10] 
+            [1,3]   [5]      [7] [9]          [8,6]   [4]     [2]   [10] 
+          [1]   [3]   [5]    [7, 9]         [8]  [6]  [4]    [2]   [10] 
+    for each sub array, low == high then function will stop calling itself and perform merge operation
+        [1, 3]   [5]        [7,9]            [8,6]       [4]    [2,10] 
+           [1,3,5]          [7,9]                 [8,6,4]    [2,10] 
+                [1,3,5,7,9]                      [2,4,6,8,10] 
+                          [1,3,5,7,9,2,4,6,8,10] 
+
+Time complexity:
+
+    * Merge method: to copy the origenal array into two sub-array will take O(n) space complexity;
+
+        for "n" elememts of array, then it will take "n" time to compaire and, "n" time to copy elements.
+            total time: n + n = 2
+            hance, O(n) time complexity;
+    
+    * mergeSort: 
+        since it is recursive method.
+            T(n) = T(n/2) + T(n/2) + O(n);
+            using Master theorem
+            T(n) = O(nlog(n))
+
+    hance, total time complexity to perform mergeSort is O(nlog(n)) in each cases
+           and space complexity is O(n);

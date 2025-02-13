@@ -1,5 +1,3 @@
-let arr = [1,3,5,7,9,8,6,4,2,10];
-
 const merge = (arr, low, mid, high) => {
     const leftArr = [], rightArr = [], n1 = mid - low + 1, n2 = high - mid;
     let i=0, j=0, k=low;
@@ -31,5 +29,4 @@ const mergeSort = (arr, low = 0, high = arr.length-1) => {
     return;
 }
 
-mergeSort(arr);
-console.log(arr);
+export default mergeSort;
