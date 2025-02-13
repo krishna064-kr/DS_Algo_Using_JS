@@ -1,4 +1,3 @@
-
 import Node from '../../Node/doublyLinkedList.js'
 
 class Bst{
@@ -15,11 +14,11 @@ class Bst{
       if(this.isEmpty()) this.root = newNode;
       else if(val < currNode.data){
         if(!currNode.left) currNode.left = newNode;
-        else insert(val, currNode.left)
+        else this.insert(val, currNode.left)
       }
       else {
         if(!currNode.right) currNode.right = newNode;
-        else insert(val, currNode.right);
+        else this.insert(val, currNode.right);
       }
     }
     
@@ -71,10 +70,11 @@ class Bst{
     }
     
     findMax(currNode = this.root){
-      return !currNode.right ? currNode.data : this.findMax(currNode.right);
+      return !currNode.right ? currNode : this.findMax(currNode.right);
     }
+
     findMin(currNode = this.root){
-      return !currNode.left ? currNode.data : this.findMin(currNode.left);
+      return !currNode.left ? currNode : this.findMin(currNode.left);
     }
     
     searchEle(val, currNode = this.root){
@@ -84,5 +84,45 @@ class Bst{
         else searchEle(val, currNode.right);
     }
     
+    getSuccessor(currNode) {
+      currNode = currNode.right;
+      return this.findMin(currNode);
+    }
+  
+    getPredecessor(currNode) {
+      currNode = currNode.left;
+      return this.findMax(currNode);
+    }
+    
+    delete(val, root = this.root) {
+      if (!root) {
+        return root;
+      }
+      if (root.data > val) {
+        root.left = this.delete(val, root.left);
+      } else if (root.data < val) {
+        root.right =  this.delete(val, root.right);
+      } else {
+        // When only one children is present, link with it's child.
+        if (!root.left) return root.right;
+        if (!root.right) return root.left;
+  
+        // When both children are present,
+
+        // replace with inOrder Successor.
+        // let succ = this.getSuccessor(root);
+        // root.data = pred.data;
+        // root.right = this.delete(pred.data, root.right);
+        
+        // replace with inOrder Predecessor.
+        let pred = this.getPredecessor(root);
+        root.data = pred.data;
+        root.left = this.delete(pred.data, root.left);
+      }
+      return root;
+    }
+
   }
   
+export default Bst;
+
