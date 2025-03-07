@@ -1,0 +1,30 @@
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Linked List~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Linked List:It is a linear data structure use to organise the collection of elements, store elements in separate 
+            memory locations, and each element points to the next one in the sequence.
+
+    Structure of a Linked List: It contain the "data" and "next" pointer that has location of next node
+                                The complete package of data and next is known as node of Linked List;
+
+Linked Lists are mainly three types 
+    * Singly Linked List
+    * Doubly Linked List
+    * Circular Linked List
+
+    # Singly Linked List: 
+        Each node points to the next node in the sequence and last node points to null(indicate end of list).
+
+    # Doubly Linked List: 
+        Each node has two pointers(one pointing to the next node and another pointing to the previous node).
+        it allows traversal in both direction;
+
+    # Circular Linked List:
+        * using singly linked list: The last node's next pointer points to the first node, forming a loop.
+        * using Doubly linked list: The first node points to the last node, and the last node points back to the first node.
+    
+Operations on Linked List
+    * Insertion
+    * Deletion
+    * Traversal
+    * Searching
+    * Reversal

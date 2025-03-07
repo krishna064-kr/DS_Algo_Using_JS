@@ -1,0 +1,64 @@
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~🅐🅡🅡🅐🅨~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Ａｒｒａｙ: It is a simple Linear_Data_Structure that stores a collection of same_type_of_elements(Homogeneous Data) in a contiguous_block_of_memory(Indexing), 
+            it has random acess;
+
+    Random Acess:In order to go to an element we need not to cross every element of array, we can directly jump to the element;
+                Direct jump is possible because of array elements are store continous fashion in memory;
+         
+    General Type of array;
+        * 1-D array;
+        * 2-D array;
+        * n-D array;
+
+    # 1-D Array;
+
+        array indexs starts with 0;
+                    index [ Array's Element ]
+            indexs=> 0[] 1[] 2[] 3[] 4[] 5[] 6[] 7[] 8[] 9[]
+            we can find the addeess of a element of Array using given bellow method;
+            Arr[i] = BaseAddress + (i)*sizeOfDataTypeOfElement;
+                'i' represent the index of element;
+
+        array indexs starts with 1;
+            indexs=> 1[] 2[] 3[] 4[] 5[] 6[] 7[] 8[] 9[] 10[]
+            we can find the addeess of a element of Array using given bellow method;
+            Arr[i] = BaseAddress + (i-1)*sizeOfDataTypeOfElement;
+                'i' represent the index of element;
+
+    # 2-D Array;
+            row,column:while moving form left to right we can count no. of column and from top to bottom can count no. of row;
+            let's take an example of Array of 3X4 size;
+                here 3 represent, there will be 3 row and 4 represent there will be 4 column of the array;
+        [
+            00[] 01[] 02[] 03[]
+            10[] 11[] 12[] 13[]
+            20[] 21[] 22[] 23[]
+        ]
+            12[] element represent, element that present at 1st row and 2nd column;
+        To access 2-D array's elememts we take each row or column and store it continous in memory;
+
+        * ROW MAJOR ORDER (store row by row)
+            00[] 01[] 02[] 03[] 10[] 11[] 12[] 13[] 20[] 21[] 22[] 23[]
+            ~~~~~~1st row~~~~~~ ~~~~~~2nd row~~~~~~ ~~~~~~3rd row~~~~~~
+        
+        to find the index of array's elememt, can use given bellow method;
+            * index start form 0,0;
+              A[i,j] = BaseAddress + (i*n + j)sizeOfDataTypeOfElement;
+
+            * index start form 1,1;
+              A[i,j] = BaseAddress + ( (i-1) * n + (j-1) )sizeOfDataTypeOfElement;
+
+            n represent no. of column;
+
+        * COLUMN MAJOR ORDER (store column by column)
+            00[] 10[] 20[] 01[] 11[] 21[] 02[] 12[] 22[] 03[] 13[] 23[]
+            ~~1st column~~ ~~2nd column~~ ~~3rd column~~ ~~4th column~~
+
+        to find the index of array's elememt, can use given bellow method;
+            * index start form 0,0;
+             A[i,j] = BaseAddress + (j*n + i)sizeOfDataTypeOfElement;
+
+            * index start form 1,1;
+             A[i,j] = BaseAddress + ((j-1)*n + (i-1))sizeOfDataTypeOfElement;
+

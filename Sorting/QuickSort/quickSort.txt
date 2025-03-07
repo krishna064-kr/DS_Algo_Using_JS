@@ -1,0 +1,94 @@
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Quick Sort ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Quick Sort:
+    It is a divide-and-conquer sorting algorithm, The basic idea is to perform this is,
+      partition the array around a pivot element and then recursively sort the subarrays.
+
+    we can pivote any element of array like
+        * First element: Pick the first element in the array as the pivot.
+        * Last element: Pick the last element as the pivot.
+        * Middle element: Pick the middle element.
+        * Random element: Pick a random element.
+        * Median of three: Pick the median of the first, middle, and last element.
+    
+    Partitioning:
+        * All elements smaller than the pivot come before it.
+        * All elements greater than the pivot come after it.
+    
+    Recursion:
+        * After partitioning, the pivot is in its correct place.
+        * Now, the array is split into two subarrays
+            # One on the left of the pivot (elements smaller than the pivot).
+            # One on the right of the pivot (elements greater than the pivot).
+        * Recursively apply the Quick Sort algorithm to both subarrays.
+
+    Example:
+        arr = 1,3,5,7,9,8,6,4,2,10;
+        low = 0, high = 9
+        since, low < high
+        we call the partition method that will move the pivot elememt's at it's correct place and return Index of it;
+        pivote = 1;
+        !1, 3, 5, 7, 9, 8, 6, 4, 2, 10
+            array: [1], 3, 5, 7, 9, 8, 6, 4, 2, 10              return:0
+        
+        now we apply again queueSort method on both the array.
+        for left side of the pivot element(1), low=0 & high = 0, fn will not call itself;
+        for right side of the pivot element,
+            low = 1, high = 9
+            pivote = 3, first elememt of right sub array;
+            [1], !3, 5, 7, 9, 8, 6, 4, 2, 10
+                array: [1], 2, [3], 7, 9, 8, 6, 4, 5, 10         return:2
+    
+        for left side of the pivot element(3), low=0 & high = 0, fn will not call itself;
+        for right side of the pivot element,
+            low = 3, high = 9
+            pivote = 7;
+            [1], 2, [3], !7, 9, 8, 6, 4, 5, 10
+                array: [1], 2, [3], 5, 6, 4, [7], 8, 9, 10       return:6
+
+            for left side of the pivot element(7)
+                low = 3, high = 5
+                pivote = 5;
+                [1], 2, [3], !5, 6, 4, [7], 8, 9, 10
+                array: [1], 2, [3], 4, [5], 6, [7], 8, 9, 10     return:4
+                for the left and right sife of the pivot element(5), low = high = 5, fn will not call itself;
+            for right side of the pivot element(7)
+                low = 7, high = 9
+                pivote = 8;
+                [1], 2, [3], 4, [5], 6, [7], !8, 9, 10
+                array: [1], 2, [3], 4, [5], 6, [7], [8], 9, 10   return:7
+
+                for left side of the pivot element(8) low = high = 7, fn will not call itself;
+                for right side of the pivot element(8)
+                low = 8, high = 9
+                pivote = 9;
+                [1], 2, [3], 4, [5], 6, [7], [8], !9, 10
+                array: [1], 2, [3], 4, [5], 6, [7], [8], [9], 10  return:8
+
+                for left side of the pivot element(9) low = high = 8, fn will not call itself;
+                for right side of the pivot element(9) low = high = 9, fn will not call itself;
+    
+    hance final array will be: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+
+
+Time and space complexity:
+
+    Space complexity:
+        we r not taking any extra container to store array,
+        but, we r calling quickSort method recursively until condition breaks that will 
+        take O(n) time in worst cases (divide in 1 : n-1 parts)
+        and O(log(n)) time in average case. (divide in n/2 : n/2 parts)
+        i.e. the size of call stack.
+
+    Time complexity:
+        since it is recursive method.
+        for the best case
+            T(n) = T(n/2) + T(n/2) + O(n);
+            using Master theorem
+            T(n) = O(nlog(n))
+        for the worst case
+            T(n) = T(n-1) + c(n)
+            i.e.  O(n^2)
+            if inputs is accending/decending order or all elements are same, will take O(n^2) time
+
+

@@ -1,0 +1,29 @@
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Data Structure~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Data Structure is mainly two types 
+    * Linear Data Structure
+    * Non-Linear Data Structure
+
+
+    # Linear Data Structure
+        In this type, elememts are stored in a sequential order and each elements are connected with its privious
+        and next element which make it easy to traverse or access the elements in a linear fashion;
+        Relationship between the elements is strictly one-to-one.
+
+
+    Type of Linear Data Structure
+        * Arrays
+        * Linked List
+        * Stack
+        * Queue
+
+
+    # Non-Linear Data Structure
+        Here, elements are not stored in a sequential order, they arranged in hierarchical or interconnected manner
+        relationship between elements is many-to-one or one-to-many;
+
+
+    Type of Non-Linear Data Structure
+    * Tree
+    * Graph
+

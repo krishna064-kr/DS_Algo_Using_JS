@@ -1,0 +1,71 @@
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Bubble Sort~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Bubble Sort: In this sorting algo, we place the maximum element at last of unsorted array by adjecent swap.
+
+  [1, 3, 5, 7, 9, 8, 6, 4, 2, 10]; 
+  i=0
+    Compare [1, 3] — No swap needed because 1 < 3.
+    Compare [3, 5] — No swap needed because 3 < 5.
+    Compare [5, 7] — No swap needed because 5 < 7.
+    Compare [7, 9] — No swap needed because 7 < 9.
+    Compare [9, 8] — Swap them because 9 > 8:
+    1, 3, 5, 7, 8, 9, 6, 4, 2, 10
+    Compare [9, 6] — Swap them because 9 > 6:
+    1, 3, 5, 7, 8, 6, 9, 4, 2, 10
+    Compare [9, 4] — Swap them because 9 > 4:
+    1, 3, 5, 7, 8, 6, 4, 9, 2, 10
+    Compare [9, 2] — Swap them because 9 > 2:
+    1, 3, 5, 7, 8, 6, 4, 2, 9, 10
+    Compare [9, 10] — No swap needed because 9 < 10.
+
+  i = 1,
+    Compare [1, 3] — No swap needed because 1 < 3.
+    Compare [3, 5] — No swap needed because 3 < 5.
+    Compare [5, 7] — No swap needed because 5 < 7.
+    Compare [7, 8] — No swap needed because 7 < 8.
+    Compare [8, 6] — Swap them because 8 > 6:
+    1, 3, 5, 7, 6, 8, 4, 2, 9, 10
+    Compare [8, 4] — Swap them because 8 > 4:
+    1, 3, 5, 7, 6, 4, 8, 2, 9, 10
+    Compare [8, 2] — Swap them because 8 > 2:
+    1, 3, 5, 7, 6, 4, 2, 8, 9, 10
+    Compare [8, 9] — No swap needed because 8 < 9.
+    
+    
+    
+  like wise after each pass, the largest element of unsorted moves into its correct position.
+  [ 1, 3, 5, 7, 9 ]
+
+
+  let's analiyse the time and space complexity
+  
+  space complexity
+    since we are not taking any extra space in any case
+    spaceComplexity: O(1) for all best, Average, worst case.
+  
+  time complexity
+    for i=0, second loop will take O(n) to swap the adjecent pair and place it at last index of unsorted Arr;
+    i=1, O(n-1);
+    i=2, O(n-2);
+    .
+    .
+    .
+    .
+    .
+    i=n-1, O(2) to get min element;
+    i=n, O(1) to get min element;
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  as you can understand, this is the summation of n natural Number;
+   i.e. n(n+1)/2
+
+    Worst case is O(n^2). 
+    Average case is O(n^2).
+
+
+    Best Case:   With the help of an additional flag "didSwap", 
+                "didSwap", we check any swaps were made during a pass. If no swaps are made (i.e. the array is already in ascending order), the flag will remain false,
+                and the algorithm will terminate early. This allows the inner loop to run in O(n) time in the best case
+    
+        i.e. O(n);
+
+

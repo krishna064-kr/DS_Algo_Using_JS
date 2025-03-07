@@ -1,0 +1,13 @@
+{
+  "name": "ds_algo_using_js",
+  "version": "1.0.0",
+  "description": "DS and algo",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
